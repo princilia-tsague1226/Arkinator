@@ -1,0 +1,19 @@
+<main id="home_page" class="flex-column align-center justify-center">
+    
+    <div class="home-image col-10 col-tablet-6 col-desktop-4 flex-row justify-center">
+        <img src="./assets/images/arki.png" alt="Akinator Crocodile">
+    </div>
+
+    <div class="home-content flex-column align-center">
+        <h2>Akinator</h1>
+      
+        <div class="flex-row">
+            <?php if( isAuthenticated() ) : ?>
+                <a href="<?= navlink('quiz.php') ?>" class="btn-home">JOUER</a>
+            <?php else: ?>
+                <a href="<?= navlink('login.php') ?>" class="btn-home">Connectez-vous</a>
+            <?php endif; ?>
+        </div>
+    </div>
+
+</main>

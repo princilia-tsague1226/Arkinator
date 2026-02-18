@@ -1,0 +1,28 @@
+<main id="result_page" class="flex-column align-center">
+    
+    <h1>Résultat</h1>
+    
+    <section class="result-card flex-column align-center">
+        
+        
+        <div class="result-content flex-column align-center">
+            <p class="announcement">
+                Je parie que tu pensais à... <strong><?= htmlspecialchars($result['noun_drink']) ?></strong>
+            </p>
+
+            <div class="drink-image">
+                <img src="assets/images/<?= htmlspecialchars($result['picture']) ?>" 
+                     alt="<?= htmlspecialchars($result['noun_drink']) ?>">
+            </div>
+
+            <div class="drink-description col-10">
+                <p><?= htmlspecialchars($result['description']) ?></p>
+            </div>
+        </div>
+
+        <div class="result-actions flex-row justify-center">
+            <a href="<?= navlink('quiz.php') ?>" class="btn btn-primary">REJOUER</a>
+        </div>
+    </section>
+
+</main>

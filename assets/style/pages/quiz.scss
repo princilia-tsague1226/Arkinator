@@ -1,0 +1,81 @@
+#quiz_page {
+    min-height: 100vh;
+    padding-top: 5rem;
+    font-family: $mainFont;
+
+    h1 {
+        @include tablet { 
+            font-size: 8rem; 
+        }
+        @include desktop { 
+            font-size: 10rem;
+            
+        }
+        font-size: 5rem;
+        font-family: $headingFont;
+        color: $white;
+        letter-spacing: 0.5rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+
+    .quiz-card {
+        width: 95%;
+        padding: 2rem;
+        
+        @include tablet {
+            width: 70%;
+            padding: 4rem;
+        }
+        
+        @include desktop {
+            width: 50%;
+            max-width: 800px;
+        }
+        max-width: 800px;
+        background: $pink;
+        border-radius: 1rem;
+        box-shadow: 0 10px 25px rgba($dark, 0.1);
+
+        .question-text {
+            font-family: $headingFont;
+            font-size: 2.2rem;
+            color: $dark;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .responses-container {
+            width: 100%;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+
+            .btn-quiz {
+                width: 100%;
+                padding: 1.5rem;
+                border: 2px solid $primary;
+                border-radius: 0.5rem;
+                text-align: center;
+                text-decoration: none;
+                color: $dark;
+                font-size: 1.8rem;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: rgba($primary, 0.05);
+                }
+            }
+        }
+
+        .link-restart {
+            color: #7d4f9d; 
+            text-decoration: none;
+            font-size: 1.6rem;
+            margin-top: 1rem;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

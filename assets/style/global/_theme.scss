@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    font-family: $mainFont, serif;
+    background: $background;
+    color: $dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headingFont, sans-serif;
+    font-weight: bold;
+    color: $white;
+}
+
+a {
+    color: $dark;
+}
+
+button {
+    border: none;
+}
+
+main {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    flex: 1;
+}
+
+.btn {
+    width: fit-content;
+    padding: 1rem 2rem;
+    margin: .5rem;
+    border-radius: .8rem;
+    text-decoration: none;
+    font-family: "Geist", sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+
+    &.btn-primary {
+        background-color: $primary;
+        color: $white;
+
+        &:hover {
+            background-color: darken( $primary, 10%);
+            text-decoration: none;
+        }
+    }
+
+    &.btn-success {
+        background-color: $success;
+        color: $white;
+
+        &:hover {
+            background-color: darken( $success, 10%);
+            text-decoration: none;
+        }
+    }
+
+    &.btn-error {
+        background-color: $error;
+        color: $white;
+
+        &:hover {
+            background-color: darken( $error, 10%);
+            text-decoration: none;
+        }
+    }
+}
+
+.bg-dark {
+    background-color: $dark;
+    color: $white;
+}
+
+.border-rounded {
+    border-radius: .8rem;
+}
+
+.txt-error {
+    color: $error;
+}

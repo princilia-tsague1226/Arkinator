@@ -1,0 +1,59 @@
+<main id="account_page" class="flex-column align-center">
+    
+    <h2><?= htmlspecialchars($player['username']) ?></h1>
+    
+    <section class="account-card flex-column align-center col-11 col-tablet-8 col-desktop-6">
+        <div class="account-section col-12">
+            <h3>Historique des parties</h3>
+            <div class="history-list flex-column">
+                <?php foreach ($playerGame as $game): ?>
+                    <div class="history-item flex-row justify-between align-center">
+                        <span class="date">Le <?= date('d/m/Y', strtotime($game['date_game'])) ?></span>
+                        <span class="drink-name"><strong><?= htmlspecialchars($game['result_noun']) ?></strong></span>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    
+    <a class="link" href="<?= navlink('quiz.php') ?>"><button class="btn btn-primary" type="submit">Jouer</button></a>
+    
+    <section class="account-card flex-column align-center col-11 col-tablet-8 col-desktop-6">
+        
+        <div class="account-section col-12">
+            <h3>Changer mon mot de passe</h3>
+            <p class="instruction">Votre mot de passe doit contenir entre 8 et 16 lettres, avec au moins une majuscule, une minuscule, 1 chiffre et 1 caractère spécial.</p>
+            
+            <form action="" method="POST" class="flex-column align-center col-12">
+                
+                <div class="form-group col-12 col-tablet-10">
+                    <label for="old-password">Mot de passe actuel</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="old-password" name="old-password" required>
+                        <i class="fa-regular fa-eye togglePassword"></i>
+                    </div>
+                </div>
+                
+                <div class="form-group col-12 col-tablet-10">
+                    <label for="new-password">Nouveau mot de passe</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="new-password" name="new-password" required>
+                        <i class="fa-regular fa-eye togglePassword"></i>
+                    </div>
+                </div>
+                
+                <button class="btn-account" type="submit" name="update_password">Changer de mot de passe</button>
+            </form>
+        </div>
+
+        <div class="account-section col-12 flex-column align-center">
+            <h3 class="delete-title">Supprimer mon compte</h3>
+            <form action="" method="POST" class="col-12 flex-column align-center">
+                <button class="btn-account btn-delete" type="submit" name="delete_account" onclick="return confirm('Êtes-vous sûre de vouloir supprimer votre compte ?')">
+                    Supprimer le compte
+                </button>
+            </form>
+        </div>
+        
+    </section>
+</main>

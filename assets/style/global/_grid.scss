@@ -1,0 +1,87 @@
+// FLEX
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+// JUSTIFY
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+// ALIGN
+.align-start {
+    align-items: flex-start;
+}
+.align-end {
+    align-items: flex-end;
+}
+.align-center {
+    align-items: center;
+}
+.align-baseline {
+    align-items: baseline;
+}
+.align-stretch {
+    align-items: stretch;
+}
+
+// COLUMNS
+@for $i from 1 to 13 {
+    .col-#{$i} {
+        width: calc( 100% * $i / 12 - 3.2rem );
+        margin: 1.6rem;
+    }
+}
+
+@for $i from 1 to 13 {
+    @include tablet {
+
+        .col-tablet-#{$i} {
+            width: calc( 100% * $i / 12 - 3.2rem );
+            margin: 1.6rem;
+        }
+
+    }
+}
+
+@for $i from 1 to 13 {
+    @include desktop {
+
+        .col-desktop-#{$i} {
+            width: calc( 100% * $i / 12 - 3.2rem );
+            margin: 1.6rem;
+        }
+
+    }
+}

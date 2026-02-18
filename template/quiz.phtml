@@ -1,0 +1,25 @@
+<main id="quiz_page" class="flex-column align-center">
+    
+    <h1>QUIZ</h1>
+
+    <section class="quiz-card flex-column align-center justify-center">
+        <h2 class="question-text">
+            <?= htmlspecialchars($currentQuestion['question_wording']) ?>
+        </h2>
+
+        <div class="responses-container flex-column align-center col-12">
+            <?php foreach ($availableResponses as $res): ?>
+                <?php 
+                    $url = ($res['id_result'] !== null) 
+                        ? navlink('result.php', ['id' => $res['id_result']]) 
+                        : navlink('quiz.php', ['id' => $res['id_next_question']]);
+                ?>
+                <a href="<?= $url ?>" class="btn-quiz">
+                    <?= ucfirst(htmlspecialchars($res['content'])) ?>
+                </a>
+            <?php endforeach; ?>
+        </div>
+
+        <a href="<?= navlink('quiz.php') ?>" class="link-restart">Recommencer le quiz</a>
+    </section>
+</main>

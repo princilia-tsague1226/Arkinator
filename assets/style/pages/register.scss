@@ -1,0 +1,68 @@
+#register_page {
+
+    height: 100vh;
+
+    & > form {
+        
+        & > label{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 1.6rem 0;
+            font-family: "Geist", sans-serif;
+            font-size: 1.8rem;
+
+            input {
+                
+                margin-top: 1rem;
+                width: 100%;
+                padding: 1rem;
+                height: 3.8rem;
+                border-radius: .8rem;
+                border: 1px solid $dark;
+                box-sizing: border-box;
+                
+
+            }
+            
+            .password-wrapper {
+                position: relative;
+                width: 100%;
+            
+
+                & > input {
+                    margin-top: 0;
+                    padding-right: 3.5rem;
+    
+                }
+                
+                i {
+                    position: absolute;
+                    right: 1rem;
+                    top: 35%;
+                    cursor: pointer;
+                    color: #5a6a85;
+                    font-size: 1.2rem;
+                    transition: color 0.3s;
+            
+                    &:hover {
+                        color: $dark;
+                    }
+                }
+            }
+        }
+
+        button {
+            display: block;
+            width: fit-content;
+
+            &.btn {
+                margin: 2rem auto 0;
+            }
+        }
+
+    }
+
+}

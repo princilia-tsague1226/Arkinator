@@ -1,0 +1,18 @@
+<?php require_once './utils/functions.php' ?>
+
+<header id="main_header" class="flex-row justify-between align-center">
+
+    <a class="logo" href="<?= navlink('index.php') ?>">Acceuil</a>
+
+    <nav>
+        <?php if( isAuthenticated() ) : ?>
+            <a class="link" href="<?= navlink('account.php') ?>">Mon compte</a>
+            <a class="link txt-error" href="<?= navlink('logout.php') ?>">Déconnexion</a>
+            
+        <?php else: ?>
+            <a class="link" href="<?= navlink('login.php') ?>">Connexion</a>
+            <a class="link" href="<?= navlink('register.php') ?>">Inscription</a>
+        <?php endif; ?>
+    </nav>
+
+</header>

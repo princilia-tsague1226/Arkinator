@@ -1,0 +1,152 @@
+#account_page {
+    min-height: 100vh;
+    background: $background;
+    padding: 2rem 1rem;
+    font-family: $mainFont;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 4rem;
+
+    @include tablet { 
+        padding: 5rem 0;
+    }
+
+    h2 {
+        font-family: $headingFont;
+        font-size: 4rem;
+        color: $white;
+        margin-bottom: 2rem;
+        text-align: center;
+
+        @include tablet { 
+            font-size: 6rem;
+        }
+        @include desktop { 
+            font-size: 8rem;
+        }
+    }
+    
+    section {
+        width: 100%;
+        max-width: 600px;
+        background: $pink;
+        padding: 2rem 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin: 0 auto;
+
+        @include tablet { 
+            padding: 4rem;
+        }
+    }
+
+    .account-card h3 {
+        font-family: $headingFont;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        color: $dark;
+        text-align: center;
+        @include tablet { 
+            font-size: 2.2rem;
+        }
+        
+    }
+
+    .account-section {
+        // margin-bottom: 3rem;
+        // padding-bottom: 2rem;
+        // border-bottom: 1px solid #f0f0f0;
+        &:last-child { 
+            border-bottom: none;
+        }
+
+        .instruction {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: $dark;
+            line-height: 1.4;
+        }
+    }
+
+    .history-item {
+        padding: 1.2rem 0;
+        border-bottom: 1px solid #fafafa;
+        font-size: 1.4rem;
+        @include tablet { 
+            font-size: 1.6rem;
+        }
+
+        .drink-name { 
+            color: $dark; 
+        }
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+        input {
+            width: 50%;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0.4rem;
+        }
+        .password-wrapper {
+            position: relative;
+            width: 100%;
+        
+            input {
+                width: 100%;
+                padding-right: 4rem;
+            }
+        
+            .togglePassword {
+                position: absolute;
+                right: 1.5rem;
+                top: 30%;
+                cursor: pointer;
+                color: #666;
+                font-size: 1.8rem;
+        
+                &:hover {
+                    color: $dark;
+                }
+            }
+        }
+    }
+
+    .btn-account {
+        background-color: #436649;
+        color: $white;
+        border: none;
+        padding: 1.2rem 2rem;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        width: 100%;
+        max-width: 300px;
+        transition: transform 0.2s;
+        display: block;
+        margin: 2rem auto;
+
+        &:hover { 
+            background-color: rgba($primary, 0.9);
+        }
+        &.btn-delete {
+            margin-top: 4rem;
+            background-color: $red;
+            
+            &:hover {
+                background-color: $redHover;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,54 @@
+#home_page {
+    min-height: calc(100vh - 120px); // Ajuste selon la taille de ton header/footer
+    background: $background; // Dégradé fidèle à l'image
+    padding: 2rem;
+
+    .home-image {
+        margin-bottom: 1rem;
+        
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 350px; // Taille sur mobile
+            
+            @include tablet {
+                max-width: 450px; // Taille sur tablette
+            }
+            
+            @include desktop {
+                max-width: 550px; // Taille sur grand écran
+            }
+        }
+    }
+
+    h2 {
+        font-family: $headingFont;
+        font-size: 5rem; // Taille mobile
+        color: $white;
+        margin: 1rem 0 2rem 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
+        @include tablet {
+            font-size: 5rem; // Taille tablette
+        }
+        
+        @include desktop {
+            font-size: 5rem; // Taille desktop identique au modèle
+        }
+    }
+
+    .btn-home {
+        background-color: $primary; // Le vert de tes boutons
+        color: $white;
+        padding: 1.2rem 2.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.6rem;
+        transition: transform 0.2s, background-color 0.2s;
+
+        &:hover {
+            background-color: rgba($primary, 0.8);
+        }
+    }
+}

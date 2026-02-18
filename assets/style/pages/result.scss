@@ -1,0 +1,85 @@
+#result_page {
+    min-height: 100vh;
+    background: $background;
+    font-family: $mainFont;
+    padding: 2rem 1rem;
+
+    h1 {
+        font-family: $headingFont;
+        padding: 2rem 1rem;
+        font-size: 4rem;
+        @include tablet { 
+            font-size: 6rem; 
+            
+        }
+        color: $white;
+        margin-bottom: 3rem;
+        text-shadow: 0 4px 10px rgba($dark, 0.1);
+    }
+
+    .result-card {
+        width: 95%;
+        max-width: 900px;
+        background: $pink;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        .announcement {
+            font-size: 1.6rem; 
+            @include tablet { 
+                font-size: 2.2rem; 
+                
+            }
+            
+            color: $dark;
+            margin-bottom: 4rem;
+            
+            strong {
+                font-weight: 800;
+                font-size: 2.4rem;
+            }
+        }
+
+        .drink-image {
+            margin-bottom: 4rem;
+            img {
+                max-width: 100%;
+                @include tablet {
+                    max-width: 500px;
+                }
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .drink-description {
+            p {
+                font-size: 1.8rem;
+                line-height: 1.6;
+                color: $dark;
+                text-align: center;
+            }
+        }
+
+        .result-actions {
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 4rem;
+            @include tablet {
+                flex-direction: row; 
+                gap: 2rem;
+            }
+            
+            
+            .btn {
+                padding: 1.5rem 3rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

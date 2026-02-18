@@ -1,0 +1,20 @@
+// Inclusion des styles globaux
+@import 'global/variables';
+@import 'global/fonts';
+@import 'global/normalize';
+@import 'global/mixins';
+@import 'global/grid';
+@import 'global/theme';
+
+// Inclusion des styles de parties de templates
+@import 'template/header';
+@import 'template/footer';
+
+
+// Inclusion des styles de pages
+@import 'pages/home';
+@import 'pages/register';
+@import 'pages/login';
+@import 'pages/account';
+@import 'pages/quiz';
+@import 'pages/result';

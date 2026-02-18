@@ -1,0 +1,32 @@
+<main id="login_page" class="flex-column justify-center align-center">
+
+    <h1>Login</h1>
+
+    <form action="" method="POST" class="col-12 col-tablet-6 col-desktop-4 flex-column">
+
+        <label for="username">
+            Username
+            <input id="username" name="username" type="text">
+        </label>
+        
+        <label for="password">Mot de passe
+            <div class="password-wrapper">
+                <input type="password" id="password" name="password" required>
+                <i class="fa-regular fa-eye togglePassword"></i>
+            </div>
+        </label>
+
+
+        <button class="btn btn-primary" type="submit">Connectez-vous</button>
+        
+
+    
+        <?php if( isset( $error ) && !empty( $error ) ) : ?>
+            <p class="txt-error">
+                <?= htmlspecialchars($error) ?>
+            </p>
+        <?php endif ?>
+
+    </form>
+
+</main>

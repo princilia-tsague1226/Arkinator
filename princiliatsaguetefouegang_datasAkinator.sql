@@ -46,7 +46,7 @@ INSERT INTO `game` (`id`, `date_game`, `id_player`, `id_result`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `player`
+-- Structure de la table `Player`
 --
 
 CREATE TABLE `player` (
